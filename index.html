@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My music</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/icon/logo.svg" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Font -->
+    <link rel="stylesheet" href="./assets/font/stylesheet.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Header -->
+      <header id="header">
+        <!-- Sidebar -->
+        <section id="sidebar">
+          <!-- Logo -->
+          <div class="logo">
+            <img
+              src="./assets/img/music-logos/music-logos_transparent.png"
+              alt="MyMusic"
+            />
+          </div>
+
+          <!-- Features -->
+          <section class="features">
+            <ul class="list-features">
+              <li class="feature-item feature-home active">
+                <svg
+                  class="icon-feature nonfill"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-house"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"
+                  />
+                </svg>
+                <svg
+                  class="icon-feature fill"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-house-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"
+                  />
+                  <path
+                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"
+                  />
+                </svg>
+                <span class="name">Home</span>
+              </li>
+              <li class="feature-item feature-library">
+                <svg
+                  class="icon-feature"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-music-note-list"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"
+                  />
+                  <path fill-rule="evenodd" d="M12 3v10h-1V3h1z" />
+                  <path
+                    d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
+                <span class="name">Library</span>
+              </li>
+              <li class="feature-item feature-queue">
+                <svg
+                  class="icon-feature"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-music-note-beamed"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"
+                  />
+                  <path
+                    d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"
+                  />
+                </svg>
+                <span class="name">Queue</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Song like-->
+          <section class="songlike">
+            <ul class="list-song">
+              <li class="song-item">
+                <span class="number">1</span>
+                <div class="song">
+                  <figure class="thumbnail">
+                    <img
+                      src="./assets/img/thumbnail/Sweet Memories Theme.jpg"
+                      alt="Sweet Memories"
+                    />
+                  </figure>
+
+                  <section class="infosong">
+                    <h4 class="namesong">Sweet Memories</h4>
+                    <h4 class="namesinger">けんかをやめて</h4>
+                  </section>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <!-- Main -->
+        <section id="main">
+          <!-- Header -->
+          <header class="header">
+            <!-- Search -->
+            <div class="search">
+              <svg
+                class="icon-search"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+              <input
+                type="text"
+                name=""
+                id="input-search"
+                placeholder="What do you want to listen to?"
+                autocomplete="off"
+              />
+            </div>
+
+            <!-- Avatar -->
+            <div class="avatar">
+              <div class="avatar-thumb">
+                <img
+                  src="./assets/img/avatar6.jfif"
+                  alt="My avatar"
+                  class="avatar-img"
+                />
+              </div>
+            </div>
+          </header>
+
+          <!-- Theme -->
+          <section class="theme"></section>
+
+          <!-- Playlist main -->
+          <section class="main-song">
+            <h1 class="heading">Good <span class="ssDay">morning</span></h1>
+            <div class="list-song">
+              <!-- <div data-id="box1" class="box-song">
+                <img
+                  src="./assets/img/listthumb/Study Chill.png"
+                  alt="Study Chill"
+                  class="thumb-img"
+                />
+
+                <h4 class="name-song">Study Chill</h4>
+
+                <div class="play-pause">
+                  <svg
+                    class="icon-control pause"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pause-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon-control play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-play-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                    />
+                  </svg>
+                </div>
+              </div> -->
+
+              <!-- <div data-id="box2" class="box-song">
+                <img
+                  src="./assets/img/listthumb/MixChill.jpg"
+                  alt="Chill Mix"
+                  class="thumb-img"
+                />
+
+                <h4 class="name-song">Chill Mix</h4>
+
+                <div class="play-pause">
+                  <svg
+                    class="icon-control pause"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pause-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon-control play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-play-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div data-id="box3" class="box-song">
+                <img
+                  src="./assets/img/listthumb/romanticmix.jpg"
+                  alt="Romantic Mix"
+                  class="thumb-img"
+                />
+
+                <h4 class="name-song">Romantic Mix</h4>
+
+                <div class="play-pause">
+                  <svg
+                    class="icon-control pause"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pause-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon-control play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-play-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div data-id="box4" class="box-song">
+                <img
+                  src="./assets/img/listthumb/trending.jpg"
+                  alt="Trending"
+                  class="thumb-img"
+                />
+
+                <h4 class="name-song">Trending</h4>
+
+                <div class="play-pause">
+                  <svg
+                    class="icon-control pause"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pause-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon-control play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-play-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div data-id="box5" class="box-song">
+                <img
+                  src="./assets/img/listthumb/ghibli.webp"
+                  alt="Ghibli"
+                  class="thumb-img"
+                />
+
+                <h4 class="name-song">Ghibli</h4>
+
+                <div class="play-pause">
+                  <svg
+                    class="icon-control pause"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pause-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon-control play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-play-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div data-id="box6" class="box-song">
+                <img
+                  src="./assets/img/listthumb/workhard.jpg"
+                  alt="Work Hard"
+                  class="thumb-img"
+                />
+
+                <h4 class="name-song">Work Hard</h4>
+
+                <div class="play-pause">
+                  <svg
+                    class="icon-control pause"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pause-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon-control play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-play-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                    />
+                  </svg>
+                </div>
+              </div> -->
+            </div>
+          </section>
+
+          <!-- Apperance Song by Search -->
+          <section id="song-search" class="playlist-song">
+            <section class="list-song">
+              <div class="border">
+                <span class="stt">#</span>
+                <span class="title">Title</span>
+                <span class="feature-duration">
+                  <span class="name-feature">Duration</span>
+                  <svg
+                    class="icon-control duration"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-clock"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                    />
+                    <path
+                      d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <ul class="box-list-song">
+                <li class="song-item">
+                  <span class="number-stt">1</span>
+                  <img
+                    src="./assets/img/thumbSong/LeeHiOnly.jpg"
+                    alt="Only"
+                    class="song-thumb"
+                  />
+                  <section class="info-song">
+                    <h3 class="name-song">Only</h3>
+                    <h3 class="name-singer">Lee Hi</h3>
+                  </section>
+                  <span class="time-song">0:00</span>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Add toast add -->
+            <!-- <section class="toast-add add">
+              <span class="text">Added to queue</span>
+            </section> -->
+          </section>
+        </section>
+
+        <!-- Playlist Song -->
+        <section id="playlist-song" class="playlist-song">
+          <section class="playlist-thumb">
+            <img
+              src="./assets/img/listthumb/Study Chill.png"
+              alt="Study Chill"
+              class="playlist-img"
+            />
+            <section class="content">
+              <span>Playlist</span>
+              <h2 class="name-playlist">Study Chill</h2>
+              <span class="number-song">
+                <span>Made for you, </span>
+                <span class="number">10</span> song</span
+              >
+            </section>
+          </section>
+
+          <section class="list-song">
+            <div class="border">
+              <span class="stt">#</span>
+              <span class="title">Title</span>
+              <span class="feature-duration">
+                <span class="name-feature">Duration</span>
+                <svg
+                  class="icon-control duration"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-clock"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <ul class="box-list-song">
+              <li class="song-item">
+                <div class="song">
+                  <span class="number-stt">1</span>
+                  <img
+                    src="./assets/img/thumbSong/LeeHiOnly.jpg"
+                    alt="Only"
+                    class="song-thumb"
+                  />
+                  <section class="info-song">
+                    <h3 class="name-song">Only</h3>
+                    <h3 class="name-singer">Lee Hi</h3>
+                  </section>
+                  <span class="time-song">0:00</span>
+                </div>
+                <span class="feature-add add">
+                  <span class="name-feature">Add to queue</span>
+                  <svg
+                    class="icon-add"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                    />
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    />
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Add toast add -->
+          <!-- <section class="toast-add add">
+            <span class="text">Added to queue</span>
+          </section> -->
+        </section>
+
+        <!-- Queue -->
+        <section id="main-queue" class="main-queue playlist-song">
+          <img src="./assets/img/queue.webp" alt="Queue" class="img-queue" />
+          <!-- Now playing -->
+          <section class="now-playing">
+            <span class="text">Now playing</span>
+            <section class="list-song">
+              <ul class="box-list-song">
+                <!-- <li class="song-item">
+                  <div class="song">
+                    <span class="number-stt">1</span>
+                    <img
+                      src="./assets/img/thumbSong/LeeHiOnly.jpg"
+                      alt="Only"
+                      class="song-thumb"
+                    />
+                    <section class="info-song">
+                      <h3 class="name-song">Only</h3>
+                      <h3 class="name-singer">Lee Hi</h3>
+                    </section>
+                    <span class="time-song">0:00</span>
+                  </div>
+                  <span class="feature-add add">
+                    <span class="name-feature">Add to queue</span>
+                    <svg
+                      class="icon-add"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-plus-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                      />
+                      <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                      />
+                    </svg>
+                  </span>
+                </li> -->
+              </ul>
+            </section>
+          </section>
+
+          <!-- Next Song -->
+          <section class="next-song">
+            <span class="text">Next Song</span>
+            <section class="list-song">
+              <ul class="box-list-song">
+                <!-- <li class="song-item">
+                  <div class="song">
+                    <span class="number-stt">1</span>
+                    <img
+                      src="./assets/img/thumbSong/LeeHiOnly.jpg"
+                      alt="Only"
+                      class="song-thumb"
+                    />
+                    <section class="info-song">
+                      <h3 class="name-song">Only</h3>
+                      <h3 class="name-singer">Lee Hi</h3>
+                    </section>
+                    <span class="time-song">0:00</span>
+                  </div>
+                  <span class="feature-remove remove">
+                    <span class="name-feature">Remove to queue</span>
+                    <svg
+                      class="icon-add"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-x-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                      />
+                      <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </span>
+                </li> -->
+              </ul>
+            </section>
+          </section>
+        </section>
+      </header>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <!-- Playsong -->
+        <section class="playsong">
+          <figure class="thumbnail">
+            <img
+              src="./assets/img/thumbnail/Sweet Memories Theme.jpg"
+              alt="Sweet Memories"
+              class="thumbnail-song"
+            />
+          </figure>
+
+          <section class="infosong">
+            <h4 class="namesong">Sweet Memories</h4>
+            <h4 class="namesinger">けんかをやめて</h4>
+          </section>
+        </section>
+
+        <!-- Control song-->
+        <section class="control">
+          <div class="control-song">
+            <!-- List features control -->
+            <div class="features-control">
+              <ul class="list-control">
+                <!-- Shuffle -->
+                <li class="control-item shuffle">
+                  <div class="note">
+                    <span class="name-feature">Shuffle</span>
+                  </div>
+                  <svg
+                    class="icon-control"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-shuffle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"
+                    />
+                    <path
+                      d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"
+                    />
+                  </svg>
+                </li>
+
+                <!-- Previous -->
+                <li class="control-item previous">
+                  <div class="note">
+                    <span class="name-feature">Previous</span>
+                  </div>
+                  <svg
+                    class="icon-control"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-bar-left"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.854 3.646a.5.5 0 0 1 0 .708L8.207 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0zM4.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z"
+                    />
+                  </svg>
+                </li>
+
+                <!-- Play and pause-->
+                <li class="control-item play-pause">
+                  <svg
+                    class="icon-control pause"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pause-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon-control play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-play-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+                    />
+                  </svg>
+                </li>
+
+                <!-- Next -->
+                <li class="control-item next">
+                  <div class="note">
+                    <span class="name-feature">Next</span>
+                  </div>
+                  <svg
+                    class="icon-control"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-bar-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z"
+                    />
+                  </svg>
+                </li>
+
+                <!-- Repeat -->
+                <li class="control-item repeat">
+                  <div class="note">
+                    <span class="name-feature">Repeat</span>
+                  </div>
+                  <svg
+                    class="icon-control"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-repeat"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
+                    />
+                  </svg>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Range song -->
+            <div class="range-song">
+              <span id="currentTime">00:00</span>
+              <div class="bar">
+                <div class="line"></div>
+                <input type="range" id="seektime" min="0" max="100" value="0" />
+              </div>
+              <span id="timesong">0:00</span>
+            </div>
+          </div>
+          <!-- Volume song -->
+          <section class="volume">
+            <div class="feature-volume">
+              <!-- Volume mute -->
+              <figure class="volume-icon volume-mute">
+                <div class="note">
+                  <span class="name-feature">Unmute</span>
+                </div>
+                <svg
+                  class="icon-control"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-volume-mute"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04 4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04zm7.854.606a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"
+                  />
+                </svg>
+              </figure>
+
+              <!-- Volume one -->
+              <figure class="volume-icon volume-one">
+                <div class="note">
+                  <span class="name-feature">Mute</span>
+                </div>
+                <svg
+                  class="icon-control"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-volume-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12V4zM6.312 6.39 8 5.04v5.92L6.312 9.61A.5.5 0 0 0 6 9.5H4v-3h2a.5.5 0 0 0 .312-.11zM12.025 8a4.486 4.486 0 0 1-1.318 3.182L10 10.475A3.489 3.489 0 0 0 11.025 8 3.49 3.49 0 0 0 10 5.525l.707-.707A4.486 4.486 0 0 1 12.025 8z"
+                  />
+                </svg>
+              </figure>
+
+              <!-- Volume two -->
+              <figure class="volume-icon volume-two">
+                <div class="note">
+                  <span class="name-feature">Mute</span>
+                </div>
+                <svg
+                  class="icon-control"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-volume-up"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"
+                  />
+                  <path
+                    d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"
+                  />
+                  <path
+                    d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z"
+                  />
+                </svg>
+              </figure>
+            </div>
+            <div class="volume-range">
+              <div class="volume-bar">
+                <input
+                  type="range"
+                  id="seekvolume"
+                  min="0"
+                  max="100"
+                  value="100"
+                />
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <audio src="" id="audio"></audio>
+      </footer>
+    </div>
+
+    <script>
+      /// Control
+      let inputRange = document.getElementById("seektime");
+      inputRange.addEventListener("input", () => {
+        let value = inputRange.value;
+        let line = document.querySelector(".control .range-song .line");
+
+        line.style.width = value + "%";
+      });
+
+      /// Volume range
+      let volumnRange = document.getElementById("seekvolume");
+      let value = volumnRange.value;
+      let volume__mute = document.querySelector(".volume-mute");
+      let volume__one = document.querySelector(".volume-one");
+      let volume__two = document.querySelector(".volume-two");
+      if (value >= 70) {
+        volume__one.style.display = "none";
+        volume__mute.style.display = "none";
+        volume__two.style.display = "inline-block";
+      } else if (value > 0) {
+        volume__one.style.display = "inline-block";
+        volume__mute.style.display = "none";
+        volume__two.style.display = "none";
+      } else {
+        volume__one.style.display = "none";
+        volume__mute.style.display = "inline-block";
+        volume__two.style.display = "none";
+      }
+      volumnRange.addEventListener("input", () => {
+        let value = volumnRange.value;
+        let volume__mute = document.querySelector(".volume-mute");
+        let volume__one = document.querySelector(".volume-one");
+        let volume__two = document.querySelector(".volume-two");
+        if (value >= 70) {
+          volume__one.style.display = "none";
+          volume__mute.style.display = "none";
+          volume__two.style.display = "inline-block";
+        } else if (value > 0) {
+          volume__one.style.display = "inline-block";
+          volume__mute.style.display = "none";
+          volume__two.style.display = "none";
+        } else {
+          volume__one.style.display = "none";
+          volume__mute.style.display = "inline-block";
+          volume__two.style.display = "none";
+        }
+      });
+
+      /// Set time main song
+      let today = new Date();
+      let time = today.getHours();
+      let ssDay = document.querySelector(".ssDay");
+      if (time >= 5) {
+        ssDay.innerText = "morning";
+      } else if (time >= 12) {
+        ssDay.innerText = "afternoon";
+      } else {
+        ssDay.innerText = "evening";
+      }
+    </script>
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
