@@ -35,6 +35,7 @@ const ui = {
   isPlay: false,
   isRepeat: false,
   isSearch: false,
+  isShuffle: false,
   indexPlaylist: "",
   currentSong: 0,
   currentIndex: 0,
@@ -334,6 +335,7 @@ const ui = {
     </li>`;
     });
     nextSong.innerHTML = songItem.join("");
+    this.removeQueue();
   },
 
   createSong(indexSong) {
@@ -502,6 +504,23 @@ const ui = {
       audio.volume = this.currentVolume;
     };
 
+    // Xử lý khi nhạc chạy hết
+    audio.onpause = () => {
+      if (audio.ended) {
+        if (this.isRepeat) {
+          this.createSong(this.currentSong);
+        } else {
+          if (queueSong.length != 0) {
+            if (!this.isShuffle) this.nextSong();
+            else this.nextSong(true);
+            this.renderQueue(queueSong);
+          } else {
+            footer.querySelector(".play-pause").classList.remove("active");
+          }
+        }
+      }
+    };
+
     // Xử lý khi tua Song
     seekTime.oninput = (e) => {
       const value = (audio.duration / 100) * e.target.value;
@@ -540,15 +559,26 @@ const ui = {
 
     // Xử lý nextSong
     footer.querySelector(".next").onclick = () => {
-      this.nextSong();
+      if (!this.isRepeat) this.nextSong();
+      else {
+        this.createSong(this.currentSong);
+      }
       this.renderQueue(queueSong);
     };
 
     // Xử lý previous song
     footer.querySelector(".previous").onclick = () => {
-      this.previousSong();
+      if (!this.isRepeat) this.previousSong();
+      else {
+        this.createSong(this.currentSong);
+      }
       this.renderQueue(queueSong);
     };
+
+    // Xử lý repeatSong
+    this.repeatSong();
+    // Xử lý shuffleSong
+    this.shuffleSong();
   },
 
   addQueue(playlistSong, index) {
@@ -559,16 +589,24 @@ const ui = {
     queueSong.push(index);
   },
 
-  listSong() {
-    console.log(queueSong);
-  },
-
   // Xử lý nextSong
-  nextSong() {
+  nextSong(check = false) {
     if (queueSong.length != 0) {
-      this.createSong(queueSong[0]);
-      previousSong.unshift(queueSong[0]);
-      queueSong.shift();
+      if (check == false) {
+        this.createSong(queueSong[0]);
+        previousSong.unshift(queueSong[0]);
+        queueSong.shift();
+      } else {
+        let index = 0;
+        do {
+          index = Math.floor(Math.random() * queueSong.length) + queueSong[0];
+        } while (index == this.currentSong);
+        if (queueSong.indexOf(index) != -1) {
+          this.createSong(queueSong[index]);
+          previousSong.unshift(queueSong[index]);
+          queueSong.splice(index, 1);
+        }
+      }
     } else {
       this.createSong(this.currentSong);
     }
@@ -588,6 +626,36 @@ const ui = {
     }
   },
 
+  indexShuffle() {},
+  // Remove Queue
+  removeQueue() {
+    let listSong = main_queue.querySelectorAll(".next-song .song-item");
+    listSong.forEach((item) => {
+      item.querySelector(".remove").onclick = () => {
+        let index = Number(item.querySelector(".number-stt").innerText);
+        queueSong.splice(index - 1, 1);
+        this.renderQueue(queueSong);
+      };
+    });
+  },
+
+  // Repeat Song
+  repeatSong() {
+    let repeat = features_control.querySelector(".repeat");
+    repeat.onclick = () => {
+      repeat.classList.toggle("active");
+      this.isRepeat = !this.isRepeat;
+    };
+  },
+
+  // Xử lý shuffleSong
+  shuffleSong() {
+    let shuffle = features_control.querySelector(".shuffle");
+    shuffle.onclick = () => {
+      shuffle.classList.toggle("active");
+      this.isShuffle = !this.isShuffle;
+    };
+  },
   start() {
     this.renderPlaylist();
     this.handleEvent();

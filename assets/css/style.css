@@ -821,17 +821,12 @@ body {
 }
 
 /* Main Queue =============================== */
-
-#main,
-#home {
-  display: none;
-}
-
 #main-queue {
   width: 100%;
   background: rgb(9, 18, 31);
   overflow-y: auto;
   overflow-x: hidden;
+  display: none;
 }
 
 #main-queue::-webkit-scrollbar {
