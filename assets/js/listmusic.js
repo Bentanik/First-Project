@@ -15,7 +15,7 @@ const music = [
     patch: "./assets/music/Cupid(FIFTY FIFTY).mp3",
     thumb: "./assets/img/thumbSong/cupid.jpg",
     duration: "02:54",
-    playlist: "Chill Mix",
+    playlist: "Chill Mix, Study Chill",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const music = [
     patch: "./assets/music/Sweet Memories (Re-Mix Version).mp3",
     thumb: "./assets/img/thumbSong/Sweet Memories Theme.jpg",
     duration: "04:54",
-    playlist: "Chill Mix",
+    playlist: "Chill Mix, Study Chill",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const music = [
     patch: "./assets/music/Dream(Suzy).mp3",
     thumb: "./assets/img/thumbSong/dream.jpg",
     duration: "03:42",
-    playlist: "Chill Mix",
+    playlist: "Chill Mix, Study Chill",
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ const music = [
     patch: "./assets/music/Instagram(Dean).mp3",
     thumb: "./assets/img/thumbSong/instagram.jpg",
     duration: "04:14",
-    playlist: "Chill Mix",
+    playlist: "Chill Mix, Study Chill",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const music = [
     patch: "./assets/music/The Moon(Feat. TAEIL of NCT).mp3",
     thumb: "./assets/img/thumbSong/the moon.jpg",
     duration: "03:03",
-    playlist: "Chill Mix",
+    playlist: "Chill Mix, Study Chill",
   },
 ];
 

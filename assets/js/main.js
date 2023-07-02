@@ -185,9 +185,9 @@ const ui = {
           </li>`;
 
           // Thêm song vào queue
+          if (total == 2) previousSong.push(index);
           if (arguments.length == 3 && arguments[2] == true) {
-            if (index != 0) queueSong.push(index);
-            else previousSong.push(index);
+            if (total != 2) queueSong.push(index);
           }
         }
       });
